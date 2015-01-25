@@ -82,6 +82,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
     libaudio-resampler \
     libqcomvisualizer \
+    libqcomvoiceprocessing \
     tinymix
 
 PRODUCT_PACKAGES += \
