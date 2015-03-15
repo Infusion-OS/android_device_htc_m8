@@ -30,9 +30,9 @@ import init.qcom.usb.rc
 on early-init
     mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
-    write /sys/block/mmcblk0/queue/scheduler noop
-    write /sys/block/mmcblk0/bdi/read_ahead_kb 512
-    write /sys/block/mmcblk1/bdi/read_ahead_kb 512
+    write /sys/block/mmcblk0/queue/scheduler deadline
+    write /sys/block/mmcblk0/bdi/read_ahead_kb 1024
+    write /sys/block/mmcblk1/bdi/read_ahead_kb 1024
 
 on init
     # Set permissions for persist partition
@@ -620,10 +620,10 @@ on property:service.bootanim.exit=1
     write /dev/cpuctl/apps/cpu.notify_on_migrate "1"
 
 on property:init.svc.bootanim=running
-    write /sys/block/mmcblk0/queue/scheduler noop
+    write /sys/block/mmcblk0/queue/scheduler deadline
 
 on property:init.svc.bootanim=stopped
-    # Switch to ROW and balanced mode after boot for better UX
+    # Switch to DEADLINE and balanced mode after boot for better UX
     write /sys/class/devfreq/qcom,cpubw.40/governor "cpubw_hwmon"
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor "interactive"
     write /sys/devices/system/cpu/cpu1/cpufreq/scaling_governor "interactive"
@@ -645,4 +645,4 @@ on property:init.svc.bootanim=stopped
     write /sys/class/kgsl/kgsl-3d0/devfreq/governor msm-adreno-tz
     write /dev/cpuctl/apps/cpu.notify_on_migrate 1
 
-    write /sys/block/mmcblk0/queue/scheduler row
+    write /sys/block/mmcblk0/queue/scheduler deadline
