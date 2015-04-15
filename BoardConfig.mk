@@ -177,3 +177,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
 WITH_DEXPREOPT := true
+
+# Cl3Kener Optimizations
+GRAPHITE_OPTS=true
+USE_O3_OPTIMIZATIONS=true
