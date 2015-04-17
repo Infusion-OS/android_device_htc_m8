@@ -65,8 +65,6 @@ TARGET_KERNEL_SOURCE := kernel/htc/msm8974
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-TARGET_USES_QCOM_BSP := true
 
 # Audio
 AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
@@ -176,7 +174,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
 # Hardware
 BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
 
-WITH_DEXPREOPT := true
+# WITH_DEXPREOPT := true
 
 # Cl3Kener Optimizations
 GRAPHITE_OPTS=true
