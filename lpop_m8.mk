@@ -18,7 +18,7 @@
 # $(call inherit-product, device/sample/products/backup_overlay.mk)
 
 # Get the long list of APNs
-PRODUCT_COPY_FILES := vendor/lpop/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+PRODUCT_COPY_FILES := vendor/lpop/prebuilts/system/etc/apns-conf.xml:system/etc/apns-conf.xml
 
 # inherit from the Lpop vendor, if present
 $(call inherit-product-if-exists, vendor/lpop/configs/common_full_phone.mk)
