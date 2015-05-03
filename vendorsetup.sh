@@ -1,1 +1,1 @@
-add_lunch_combo hybrid_m8-userdebug
+add_lunch_combo lpop_m8-userdebug

@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/hybrid_m8.mk
+    $(LOCAL_DIR)/lpop_m8.mk
