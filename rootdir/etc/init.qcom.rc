@@ -525,6 +525,10 @@ service wpa_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
+service logcat /system/bin/logcat -f /data media/logcat
+    class main
+    oneshot
+
 ## Properties start here
 on property:bluetooth.hciattach=true
     start hciattach
