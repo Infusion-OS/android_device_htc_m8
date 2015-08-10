@@ -16,3 +16,8 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 #include $(BUILD_HEAPTRACKED_SHARED_LIBRARY)
+
+ifeq ($(BOARD_VENDOR),htc)
+ifeq ($(TARGET_BOARD_PLATFORM),msm8974)
+endif
+endif
